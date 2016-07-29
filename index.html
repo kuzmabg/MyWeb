@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>IgorKuzmanovic</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+
+<style type="text/css">
+* {
+  margin: 0px;
+  padding: 0px;
+}
+ -ms-@viewport {
+    width: device-width;
+    initial-scale: 1;
+    zoom: 1;
+    min-zoom: 1;
+    max-zoom: 3;
+    user-zoom: fixed;
+}
+@viewport {
+    width: device-width;
+    initial-scale: 1;
+    zoom: 1;
+    min-zoom: 1;
+    max-zoom: 3;
+    user-zoom: fixed;
+}
+body {
+    background: lightblue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(lightblue, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(lightblue, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(lightblue, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(lightblue, white); /* Standard syntax */
+    background-repeat: repeat-x;
+}
+nav {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  line-height: 2;
+  text-align: center;
+  margin: auto; /*for display only*/
+  width: 90%;
+}
+h5 {
+    margin-left: 36%;
+    color:white;
+    opacity: .5;
+    font-family: "calibri";
+    text-align: right;
+    text-transform: uppercase;
+    margin-top: -30px;
+    text-shadow: -10px -17px 1px dodgerblue;
+}
+h3 {
+    color: white;
+    font-family: "calibri";
+    font-size: 200%;
+    text-align: center;
+    line-height: 1;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 2px black;
+    padding: 2%;
+}
+.menu-item {
+  background: #fff;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;  
+  cursor: default;
+}
+.alpha {
+  height: 100%;
+  background-color: lightskyblue;
+}
+.alpha ul  {
+list-style-type: none;
+}
+.alpha p {
+ font-size: 20px;
+ padding: 8px 12px;
+ color: #aaa;
+}
+.menu-item h4 {
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  border-top: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 7px 12px;
+  
+  background: #9dd7fb; /* Old browsers */
+  background: -moz-linear-gradient(top, #9dd7fb 0%, #6cc3f9 44%, #6cc3f9 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9dd7fb), color-stop(44%,#6cc3f9), color-stop(100%,#6cc3f9)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #9dd7fb 0%,#6cc3f9 44%,#6cc3f9 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #9dd7fb 0%,#6cc3f9 44%,#6cc3f9 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #9dd7fb 0%,#6cc3f9 44%,#6cc3f9 100%); /* IE10+ */
+  background: linear-gradient(top, #9dd7fb 0%,#6cc3f9 44%,#6cc3f9 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd7fb', endColorstr='#6cc3f9',GradientType=0 ); /* IE6-9 */
+}
+.menu-item h4 a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+    margin-left: 5%;
+    text-shadow: 1px 1px 0px rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.6); 
+}
+.menu-item h4:hover {  
+  background: #3baff7; /* Old browsers */
+  background: -moz-linear-gradient(top,  #3baff7 0%, #6cc3f9 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3baff7), color-stop(100%,#6cc3f9)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #3baff7 0%,#6cc3f9 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #3baff7 0%,#6cc3f9 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #3baff7 0%,#6cc3f9 100%); /* IE10+ */
+  background: linear-gradient(top,  #3baff7 0%,#6cc3f9 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3baff7', endColorstr='#6cc3f9',GradientType=0 ); /* IE6-9 */
+}
+.menu-item ul {
+  background: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  height: 0px;
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0px;
+  overflow-y: scroll;
+
+  -webkit-transition: height 1s ease;
+     -moz-transition: height 1s ease;
+       -o-transition: height 1s ease;
+      -ms-transition: height 1s ease;
+          transition: height 1s ease;
+}
+::-webkit-scrollbar {
+      width: 20px;
+}
+::-webkit-scrollbar-track {
+      background-color: lightblue;
+}
+ 
+::-webkit-scrollbar-button {
+      background-color: lightskyblue;
+}
+.menu-item ul a {
+  margin-left: 3%;
+  text-decoration: none;
+  color: #aaa;
+  display: block;
+  width: 40%;
+}
+.menu-item li {
+  border-bottom: 1px solid #eee;
+}
+.menu-item li:hover {
+  background: #DEEDFF;
+}
+.menu-item:hover ul {
+  height: 152px;
+}
+.menu-item:active ul {
+  height: 200px;
+}
+.contact{
+  height: 150px;
+  width: 100%;
+  text-align: right;
+  margin-left: -1%;
+  font-size: 100%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  overflow: hidden;
+  color: white;
+  text-shadow:0px 0px 10px dodgerblue;
+}
+.box {
+  width: 20%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  display: inline;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+    -moz-box-shadow:    inset 0 0 10px dodgerblue;
+   -webkit-box-shadow: inset 0 0 10px dodgerblue;
+   box-shadow:         inset 0 0 10px dodgerblue;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 5% auto;
+  padding-top: 10px;
+  background: #fff;
+  border-radius: 5px;
+  width: 75%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  border: 1px solid deepskyblue;
+  box-shadow: 3px 3px 10px #888888;
+  cursor: default;
+  -webkit-user-drag: element;
+}
+.popup h2 {
+  margin-top: 0;
+  padding-left: 40px;
+  padding-top: 12px;
+  color: #333;
+  font-family: Courier New, Courier, monospace;
+}
+.popup .close {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 60px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: red;
+}
+.popup .content {
+  max-height: 90%;
+  overflow: auto;
+  padding: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.map {
+width: 99.6%;
+height: 600px;
+border: 1px solid lightblue; 
+pointer-events: none;
+}
+.skype {
+margin-right: -37px;
+margin-top: -35px;
+}
+ </style>
+<body>
+<header>
+<title>Igor Kuzmanović</title>
+</header>
+  <nav>
+    <div class="menu-item alpha">
+      <h4>Igor Kuzmanovic</h4>
+            <div class="contact">      
+Phone/Viber/WhatsApp: +381-64-157-7373</br>
+Email:<a href="mailto:kuzma78@yahoo.com?Subject=Hello"target="_top">kuzma78@yahoo.com</a> 
+<a href="mailto:kuzma78@outlook.com?Subject=Hello"target="_top">kuzma78@outlook.com</a></br>
+Address: Kneza Danila 12, Beograd, Srbija</br>
+<a href="https://rs.linkedin.com/in/igorkuzmanovic">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+Skype:
+<div class="skype">
+<script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
+<div id="SkypeButton_Call_kuzmabg_1">
+ <script type="text/javascript">
+ Skype.ui({
+ "name": "chat",
+ "element": "SkypeButton_Call_kuzmabg_1",
+ "participants": ["kuzmabg"],
+ "imageColor": "white",
+ "imageSize": 24
+ });
+ </script>
+</div>
+</div>
+
+    </div>
+     </div> 
+    <div class="menu-item">
+      <h4>Web Developing</h4>
+      <ul>
+        <li><a class="button" href="#popup1">Frontend</a><h5>HTML/HTML5 CSS/CSS3 JS ...</h5></li>
+        <li><a class="button" href="#popup1">Graphic Design</a><h5>Adobe CS Corel Painter MS Expression Web ...</h5></li>
+        <li><a class="button" href="#popup1">Backend</a><h5>PHP (flat) JQuerry SQL/MySQL Visual Studio ...</h5></li>
+      </ul>
+    </div>
+      
+    <div class="menu-item">
+      <h4>System Administration</h4>
+      <ul>
+        <li><a class="button" href="#popup2">Hardware</a><h5>Computer & peripherals service and maintenance ...</h5></li>
+        <li><a class="button" href="#popup2">Networking</a><h5>Configuring, managing and maintaining networking equipment  ...</h5></li>
+        <li><a class="button" href="#popup2">Database administration</a><h5>Oracle, INOVA GIS Server ...</h5></li>
+      </ul>
+    </div>
+      
+    <div class="menu-item">
+      <h4>Skills & Education</h4>
+      <ul>
+        <li><a class="button" href="#popup3">Education</a><h5>Certificates, Secondary, Tertiary ...</h5></li>
+        <li><a class="button" href="#popup4">Skills</a><h5>Tools and Craft ...</h5></li>
+        <li><a class="button" href="#popup5">Other</a><h5>Miscellaneous ...</h5></li>
+      </ul>
+    </div>
+   <h3>  Hello! My name is Igor Kuzmanovic, and I'm a Belgrade-based freelance developer. 
+I am working remotely on projects for clients all over the world. I have a diverse set of skills,
+ranging from design, to HTML + CSS + JS and PHP, all the way to system administration </h3>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d45294.16161021849!2d20.4597269!3d44.8035302!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssr!2srs!4v1463743830781"></iframe>
+</nav>
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Professional Development</br> (Web Programming, Design and Media)</h2>
+		<a class="close" href="">×</a>
+		<div class="content">
+<b>Senior Front-end Developer ("Inspectron AG")</b></br>
+<a href="http://inspectron.ch/" target="_blank">LINK</a>
+<a href="https://www.tennis-challenge.ch/" target="_blank">LINK</a></br>
+Front-end Developement</br>
+Graphic Design </br>
+Support Team-Leader </br>
+<b>Web Developer („Sizmek“)</b></br>
+<a href="http://showcase.sizmek.com/" target="_blank">LINK</a></br>
+Developing standard and rich media flash ads</br>
+Developing standard and rich media HTML5 ads</br>
+Media encoding and modifying</br>
+<b>Ad Trafficker („AlphaDesignStudio“)</b></br>
+<a href="http://alphadesignstudio.biz/" target="_blank">LINK</a></br>
+Preparing, modifying and placement of advertisements and creative projects</br>
+Uploading campaigns to ad-server and target to the corresponding placement and ad slot</br>
+Implement Smartclip tagging</br>
+<b>Freelance Computer Programmer (entrepreneur)</b></br>
+<a href="http://tinkerbin.com/DDeWwqTr/" target="_blank">LINK</a></br>
+Software programming for a variety of clients.</br>
+Project management and editing of specialized content for advertising products published on platforms that include web, tablets, mobile and TV.</br>
+Web data administration, data entry, E-mail handling etc.
+		</div>
+	</div>
+</div>
+<div id="popup2" class="overlay">
+	<div class="popup" draggable="true">
+		<h2>Professional Development</br> (Hardware and Administrative)</h2>
+		<a class="close" href="">×</a>
+		<div class="content">
+<b>Copier and printer Service & Repair Technician („BDC Ricoh“)</b></br>
+Repair, maintain, install and test copiers and printers/Repair or replace parts in copiers and printers
+/Disassemble and re-assemble copiers and printers/Inspect, refill, repair and clean products/Perform troubleshooting and other duties.
+/Install and configure software for copiers and printers</br>
+<b>Database administrator („Telekom Srbija“)</b></br>
+Preparing the documents and document scanning services/Process all daily updates and changes coming into the database, deliver on time, 
+follow high quality standards and meet the agreed service level agreements /Processing the data, verification and validation 
+/Web-Based document access /Document indexing and custom database design /Further refining the physical design to meet system storage requirement 
+/Installing and testing new versions of the database management system /Maintaining data standards, including adherence to the Data Protection Act 
+/Writing database documentation, procedures and definitions /Managing and testing back-up and recovery /Working closely with IT project managers, 
+database programmers and web developers /Installing new applications and customizing existing applications in order to make them fit for purpose.</br>
+<b>Retail Sales Associate („EXIT“; „I WILL PC“)</b></br>
+/Interacting with customers, giving them product presentations and convincing them to make purchases.
+/Strategizing to meet assigned sales targets in the given period of time.
+/Completing all the assigned tasks by the retail sales manager.
+/Keeping a track of the stock and inventory in the store and placing orders for replenishing the stock.
+/Maintaining the proper display of goods in the store and ensuring that they comply with the quality standards.
+/Evaluating market trends and keeping track of new products and prices in the market.
+/Attending sales meetings and training activities</br>
+<b>Administrative cashier and travel agent („Argus tours“; „Perla tours“ )</b></br>
+/Greets customers including answering phones and directing customer inquiries to appropriate party
+/Answers routine billing questions/issues from customers
+/Receives and processes all payments according to standard procedures.
+/Assists in the opening and closing of a retail location which includes and but not limited to cash handling and deposits
+/Informs customers about services available and assesses customer needs
+/Completes, processes, and maintains applicable paperwork and records</br>
+<b>Computer Service & Repair Technician – („LINKS”)</b></br>
+/Repairs and tests computers and other PC equipment/Repair parts that need to be replaced in laptops and computers
+/Disassemble and re-assemble computers and laptops/Inspect, repair and clean products
+/Perform troubleshooting and other duties/Installs and configures software
+		</div>
+	</div>
+</div>
+
+<div id="popup3" class="overlay">
+	<div class="popup">
+		<h2>Education</h2>
+		<a class="close" href="">×</a>
+		<div class="content">
+<b>Secondary Education</b></br>
+ High School Certificate, 1997, “Rade Končar”, Belgrade</br>
+<b>Tertiary Education</b></br>
+ Bachelor of Science in Computer Network Engineering, achieved with honours,</br>“Rochville University”, On-line, 2005.</br>
+<b>Certificate</b></br>
+ Web-developer PHP Engineering Certificate, 2011, “IT-Academy”, Belgrade
+		</div>
+	</div>
+</div>
+<div id="popup4" class="overlay">
+	<div class="popup">
+		<h2>Skills</h2>
+		<a class="close" href="">×</a>
+		<div class="content">
+<b>Software / Applications:</b></br>TCP/IP, HTML/HTML5, CSS/CSS3, JS, JQuerry, PHP, mySQL</br>
+<b>Tools:</b> Media Encoder, Audition, Dreamweaver, Notepad++, MS Expression Web, Visual Studio Code, Flash, Corel Painter, Adobe Photoshop, 3D Max</br>
+<b>Microsoft Office Package:</b> Word, Excel, Access, PowerPoint, Project, Outlook, IE</br>
+<b>Hardware Skills:</b></br>
+Computer assembling and maintenance/Installing and configuring the peripherals, components and drivers/Installing software and applications
+/Deep knowledge of printer and cartage refilling/Troubleshooting skills in software and hardware problems/
+On-line support to customers concerning their computer problems</br>
+<b>Networking Skills:</b></br>
+Managing and Maintaining the Servers, PC’s, Routers and Switches/Backup Management, Reporting and Recovery
+/Virus Protection and Eradication/Installing configuring administrating software applications
+/Providing training about Client OS & Hardware Devices/Working acquaintance in Linux environment
+		</div>
+	</div>
+</div>
+<div id="popup5" class="overlay">
+	<div class="popup">
+		<h2>Miscellaneous</h2>
+		<a class="close" href="">×</a>
+		<div class="content">
+- Intermediate-advanced level 5 (B1) English language</br>
+- Driving licence (category B)</br>
+- Analytical thinking, planning, accuracy and attention to details.</br>
+- Organization and prioritization skills.</br>
+- Problem analysis, use of judgment and ability to solve problems efficiently.</br>
+- Organizational skills and customer service orientation
+		</div>
+	</div>
+
